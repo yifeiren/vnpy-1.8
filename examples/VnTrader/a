@@ -1,0 +1,63 @@
+exchange = {
+            'tickerPairA': 'gnx_eth',
+            'tickerPairB': 'eth_btc',
+            'tickerPairC': 'gnx_btc',
+            'tickerA': 'gnx',
+            'tickerB': 'eth',
+            'tickerC': 'btc'
+        }
+        engine = CryptoEngineTriArbitrage(me, exchange, True)
+
+        thread.start_new_thread(engine.run, ())
+
+        exchange = {
+            'tickerPairA': 'bch_eth',
+            'tickerPairB': 'eth_btc',
+            'tickerPairC': 'bch_btc',
+            'tickerA': 'bch',
+            'tickerB': 'eth',
+            'tickerC': 'btc'
+        }
+
+        engine = CryptoEngineTriArbitrage(me, exchange, True)
+
+        thread.start_new_thread(engine.run, ())
+
+        exchange = {
+            'tickerPairA': 'hpb_eth',
+            'tickerPairB': 'eth_btc',
+            'tickerPairC': 'hpb_btc',
+            'tickerA': 'hpb',
+            'tickerB': 'eth',
+            'tickerC': 'btc'
+        }
+
+        engine = CryptoEngineTriArbitrage(me, exchange, False)
+
+        thread.start_new_thread(engine.run, ())
+        exchange = {
+            'tickerPairA': 'okb_eth',
+            'tickerPairB': 'eth_btc',
+            'tickerPairC': 'okb_btc',
+            'tickerA': 'okb',
+            'tickerB': 'eth',
+            'tickerC': 'btc'
+        }
+
+        engine = CryptoEngineTriArbitrage(me, exchange, True)
+
+        thread.start_new_thread(engine.run, ())
+
+        thread.start_new_thread(engine.run, ())
+        exchange = {
+            'tickerPairA': 'ltc_eth',
+            'tickerPairB': 'eth_btc',
+            'tickerPairC': 'ltc_btc',
+            'tickerA': 'ltc',
+            'tickerB': 'eth',
+            'tickerC': 'btc'
+        }
+
+        engine = CryptoEngineTriArbitrage(me, exchange, True)
+
+        thread.start_new_thread(engine.run, ())
