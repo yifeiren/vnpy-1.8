@@ -1,0 +1,5 @@
+/home/yf/Downloads/vnpy-1.8/vnpy/api/lts/build/CMakeFiles/edit_cache.dir
+/home/yf/Downloads/vnpy-1.8/vnpy/api/lts/build/CMakeFiles/vnltsmd.dir
+/home/yf/Downloads/vnpy-1.8/vnpy/api/lts/build/CMakeFiles/vnltstd.dir
+/home/yf/Downloads/vnpy-1.8/vnpy/api/lts/build/CMakeFiles/vnltsqry.dir
+/home/yf/Downloads/vnpy-1.8/vnpy/api/lts/build/CMakeFiles/rebuild_cache.dir

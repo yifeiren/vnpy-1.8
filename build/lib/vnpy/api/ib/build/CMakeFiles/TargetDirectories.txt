@@ -1,0 +1,3 @@
+/home/yf/Downloads/vnpy-1.8/vnpy/api/ib/build/CMakeFiles/edit_cache.dir
+/home/yf/Downloads/vnpy-1.8/vnpy/api/ib/build/CMakeFiles/rebuild_cache.dir
+/home/yf/Downloads/vnpy-1.8/vnpy/api/ib/build/CMakeFiles/vnib.dir

@@ -54,8 +54,8 @@ def main():
     me.addApp(spreadTrading)
 
     # 创建主窗口
-    mw = MainWindow(me, ee)
-    mw.showMaximized()
+    #mw = MainWindow(me, ee)
+    #mw.showMaximized()
 #Yifei
     #exchange = {
     #    'exchange': 'bittrex',
@@ -137,6 +137,8 @@ def main():
 
         #thread.start_new_thread(engine.run, ())
         # 在主线程中启动Qt事件循环
+        me.getGateway('OKEX').connect()
+
     except Exception, e:
         # raise
         print e

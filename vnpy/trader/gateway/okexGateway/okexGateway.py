@@ -45,13 +45,13 @@ okex_all_symbol_pairs = ['hpb_btc','hpb_eth','hpb_usdt','eth_btc','eth_usdt','bt
 okex_all_symbol = ['btc','eth','eos','gnx','hpb','ltc','okb','hsr','xrp','bch']
 
 ########################################################################
-class OkexGateway(VtGateway):
+class okexGateway(VtGateway):
     """OKEX交易接口"""
     
     #----------------------------------------------------------------------
     def __init__(self, eventEngine, gatewayName='OKEX'):
         """Constructor"""
-        super(OkexGateway, self).__init__(eventEngine, gatewayName)
+        super(okexGateway, self).__init__(eventEngine, gatewayName)
         
         self.api_spot = SpotApi(self)     
         # self.api_contract = Api_contract(self)

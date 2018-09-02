@@ -38,19 +38,20 @@ statusMap[1] = STATUS_PARTTRADED
 statusMap[2] = STATUS_ALLTRADED
 statusMap[4] = STATUS_UNKNOWN
 
+okex_all_symbol_pairs = ['hpb_btc','hpb_eth','hpb_usdt','eth_btc','eth_usdt','btc_usdt','gnx_eth','gnx_btc','gnx_usdt','ltc_eth','ltc_btc','ltc_usdt','eos_eth','eos_btc','eos_usdt']
 
-okex_all_symbol_pairs = ['ref_usdt', 'soc_usdt', 'light_usdt', 'avt_usdt', 'of_usdt', 'brd_usdt', 'ast_usdt', 'int_usdt', 'zrx_usdt', 'ctr_usdt', 'dgd_usdt', 'aidoc_usdt', 'wtc_usdt', 'swftc_usdt', 'wrc_usdt', 'sub_usdt', 'dna_usdt', 'knc_usdt', 'kcash_usdt', 'mdt_usdt', 'theta_usdt', 'ppt_usdt', 'utk_usdt', 'qvt_usdt', 'salt_usdt', 'la_usdt', 'itc_usdt', 'fair_usdt', 'yee_usdt', '1st_usdt', 'fun_usdt', 'iost_usdt', 'mkr_usdt', 'tio_usdt', 'req_usdt', 'ubtc_usdt', 'icx_usdt', 'tct_usdt', 'san_usdt', 'lrc_usdt', 'icn_usdt', 'cvc_usdt', 'eth_usdt', 'poe_usdt', 'xlm_usdt', 'iota_usdt', 'eos_usdt', 'nuls_usdt', 'mot_usdt', 'neo_usdt', 'gnx_usdt', 'dgb_usdt', 'evx_usdt', 'ltc_usdt', 'mda_usdt', 'etc_usdt', 'dpy_usdt', 'tnb_usdt', 'nas_usdt', 'btc_usdt', 'smt_usdt', 'ssc_usdt', 'oax_usdt', 'yoyo_usdt', 'snc_usdt', 'sngls_usdt', 'bch_usdt', 'mana_usdt', 'mof_usdt', 'mco_usdt', 'vib_usdt', 'topc_usdt', 'pra_usdt', 'bnt_usdt', 'xmr_usdt', 'edo_usdt', 'snt_usdt', 'eng_usdt', 'stc_usdt', 'qtum_usdt', 'key_usdt', 'ins_usdt', 'rnt_usdt', 'bcd_usdt', 'amm_usdt', 'lend_usdt', 'btm_usdt', 'elf_usdt', 'xuc_usdt', 'cag_usdt', 'snm_usdt', 'act_usdt', 'dash_usdt', 'zec_usdt', 'storj_usdt', 'pay_usdt', 'vee_usdt', 'show_usdt', 'trx_usdt', 'atl_usdt', 'ark_usdt', 'ost_usdt', 'gnt_usdt', 'dat_usdt', 'rcn_usdt', 'qun_usdt', 'mth_usdt', 'rct_usdt', 'read_usdt', 'gas_usdt', 'btg_usdt', 'mtl_usdt', 'cmt_usdt', 'xrp_usdt', 'spf_usdt', 'aac_usdt', 'can_usdt', 'omg_usdt', 'hsr_usdt', 'link_usdt', 'dnt_usdt', 'true_usdt', 'ukg_usdt', 'xem_usdt', 'ngc_usdt', 'lev_usdt', 'rdn_usdt', 'ace_usdt', 'ipc_usdt', 'ugc_usdt', 'viu_usdt', 'mag_usdt', 'hot_usdt', 'pst_usdt',
-'ref_btc', 'soc_btc', 'light_btc', 'avt_btc', 'of_btc', 'brd_btc', 'ast_btc', 'int_btc', 'zrx_btc', 'ctr_btc', 'dgd_btc', 'aidoc_btc', 'wtc_btc', 'swftc_btc', 'wrc_btc', 'sub_btc', 'dna_btc', 'knc_btc', 'kcash_btc', 'mdt_btc', 'theta_btc', 'ppt_btc', 'utk_btc', 'qvt_btc', 'salt_btc', 'la_btc', 'itc_btc', 'fair_btc', 'yee_btc', '1st_btc', 'fun_btc', 'iost_btc', 'mkr_btc', 'tio_btc', 'req_btc', 'ubtc_btc', 'icx_btc', 'tct_btc', 'san_btc', 'lrc_btc', 'icn_btc', 'cvc_btc', 'eth_btc', 'poe_btc', 'xlm_btc', 'iota_btc', 'eos_btc', 'nuls_btc', 'mot_btc', 'neo_btc', 'gnx_btc', 'dgb_btc', 'evx_btc', 'ltc_btc', 'mda_btc', 'etc_btc', 'dpy_btc', 'tnb_btc', 'nas_btc', 'btc_btc', 'smt_btc', 'ssc_btc', 'oax_btc', 'yoyo_btc', 'snc_btc', 'sngls_btc', 'bch_btc', 'mana_btc', 'mof_btc', 'mco_btc', 'vib_btc', 'topc_btc', 'pra_btc', 'bnt_btc', 'xmr_btc', 'edo_btc', 'snt_btc', 'eng_btc', 'stc_btc', 'qtum_btc', 'key_btc', 'ins_btc', 'rnt_btc', 'bcd_btc', 'amm_btc', 'lend_btc', 'btm_btc', 'elf_btc', 'xuc_btc', 'cag_btc', 'snm_btc', 'act_btc', 'dash_btc', 'zec_btc', 'storj_btc', 'pay_btc', 'vee_btc', 'show_btc', 'trx_btc', 'atl_btc', 'ark_btc', 'ost_btc', 'gnt_btc', 'dat_btc', 'rcn_btc', 'qun_btc', 'mth_btc', 'rct_btc', 'read_btc', 'gas_btc', 'btg_btc', 'mtl_btc', 'cmt_btc', 'xrp_btc', 'spf_btc', 'aac_btc', 'can_btc', 'omg_btc', 'hsr_btc', 'link_btc', 'dnt_btc', 'true_btc', 'ukg_btc', 'xem_btc', 'ngc_btc', 'lev_btc', 'rdn_btc', 'ace_btc', 'ipc_btc', 'ugc_btc', 'viu_btc', 'mag_btc', 'hot_btc', 'pst_btc']
+#okex_all_symbol_pairs = ['ref_usdt', 'soc_usdt', 'light_usdt', 'avt_usdt', 'of_usdt', 'brd_usdt', 'ast_usdt', 'int_usdt', 'zrx_usdt', 'ctr_usdt', 'dgd_usdt', 'aidoc_usdt', 'wtc_usdt', 'swftc_usdt', 'wrc_usdt', 'sub_usdt', 'dna_usdt', 'knc_usdt', 'kcash_usdt', 'mdt_usdt', 'theta_usdt', 'ppt_usdt', 'utk_usdt', 'qvt_usdt', 'salt_usdt', 'la_usdt', 'itc_usdt', 'fair_usdt', 'yee_usdt', '1st_usdt', 'fun_usdt', 'iost_usdt', 'mkr_usdt', 'tio_usdt', 'req_usdt', 'ubtc_usdt', 'icx_usdt', 'tct_usdt', 'san_usdt', 'lrc_usdt', 'icn_usdt', 'cvc_usdt', 'eth_usdt', 'poe_usdt', 'xlm_usdt', 'iota_usdt', 'eos_usdt', 'nuls_usdt', 'mot_usdt', 'neo_usdt', 'gnx_usdt', 'dgb_usdt', 'evx_usdt', 'ltc_usdt', 'mda_usdt', 'etc_usdt', 'dpy_usdt', 'tnb_usdt', 'nas_usdt', 'btc_usdt', 'smt_usdt', 'ssc_usdt', 'oax_usdt', 'yoyo_usdt', 'snc_usdt', 'sngls_usdt', 'bch_usdt', 'mana_usdt', 'mof_usdt', 'mco_usdt', 'vib_usdt', 'topc_usdt', 'pra_usdt', 'bnt_usdt', 'xmr_usdt', 'edo_usdt', 'snt_usdt', 'eng_usdt', 'stc_usdt', 'qtum_usdt', 'key_usdt', 'ins_usdt', 'rnt_usdt', 'bcd_usdt', 'amm_usdt', 'lend_usdt', 'btm_usdt', 'elf_usdt', 'xuc_usdt', 'cag_usdt', 'snm_usdt', 'act_usdt', 'dash_usdt', 'zec_usdt', 'storj_usdt', 'pay_usdt', 'vee_usdt', 'show_usdt', 'trx_usdt', 'atl_usdt', 'ark_usdt', 'ost_usdt', 'gnt_usdt', 'dat_usdt', 'rcn_usdt', 'qun_usdt', 'mth_usdt', 'rct_usdt', 'read_usdt', 'gas_usdt', 'btg_usdt', 'mtl_usdt', 'cmt_usdt', 'xrp_usdt', 'spf_usdt', 'aac_usdt', 'can_usdt', 'omg_usdt', 'hsr_usdt', 'link_usdt', 'dnt_usdt', 'true_usdt', 'ukg_usdt', 'xem_usdt', 'ngc_usdt', 'lev_usdt', 'rdn_usdt', 'ace_usdt', 'ipc_usdt', 'ugc_usdt', 'viu_usdt', 'mag_usdt', 'hot_usdt', 'pst_usdt','ref_btc', 'soc_btc', 'light_btc', 'avt_btc', 'of_btc', 'brd_btc', 'ast_btc', 'int_btc', 'zrx_btc', 'ctr_btc', 'dgd_btc', 'aidoc_btc', 'wtc_btc', 'swftc_btc', 'wrc_btc', 'sub_btc', 'dna_btc', 'knc_btc', 'kcash_btc', 'mdt_btc', 'theta_btc', 'ppt_btc', 'utk_btc', 'qvt_btc', 'salt_btc', 'la_btc', 'itc_btc', 'fair_btc', 'yee_btc', '1st_btc', 'fun_btc', 'iost_btc', 'mkr_btc', 'tio_btc', 'req_btc', 'ubtc_btc', 'icx_btc', 'tct_btc', 'san_btc', 'lrc_btc', 'icn_btc', 'cvc_btc', 'eth_btc', 'poe_btc', 'xlm_btc', 'iota_btc', 'eos_btc', 'nuls_btc', 'mot_btc', 'neo_btc', 'gnx_btc', 'dgb_btc', 'evx_btc', 'ltc_btc', 'mda_btc', 'etc_btc', 'dpy_btc', 'tnb_btc', 'nas_btc', 'btc_btc', 'smt_btc', 'ssc_btc', 'oax_btc', 'yoyo_btc', 'snc_btc', 'sngls_btc', 'bch_btc', 'mana_btc', 'mof_btc', 'mco_btc', 'vib_btc', 'topc_btc', 'pra_btc', 'bnt_btc', 'xmr_btc', 'edo_btc', 'snt_btc', 'eng_btc', 'stc_btc', 'qtum_btc', 'key_btc', 'ins_btc', 'rnt_btc', 'bcd_btc', 'amm_btc', 'lend_btc', 'btm_btc', 'elf_btc', 'xuc_btc', 'cag_btc', 'snm_btc', 'act_btc', 'dash_btc', 'zec_btc', 'storj_btc', 'pay_btc', 'vee_btc', 'show_btc', 'trx_btc', 'atl_btc', 'ark_btc', 'ost_btc', 'gnt_btc', 'dat_btc', 'rcn_btc', 'qun_btc', 'mth_btc', 'rct_btc', 'read_btc', 'gas_btc', 'btg_btc', 'mtl_btc', 'cmt_btc', 'xrp_btc', 'spf_btc', 'aac_btc', 'can_btc', 'omg_btc', 'hsr_btc', 'link_btc', 'dnt_btc', 'true_btc', 'ukg_btc', 'xem_btc', 'ngc_btc', 'lev_btc', 'rdn_btc', 'ace_btc', 'ipc_btc', 'ugc_btc', 'viu_btc', 'mag_btc', 'hot_btc', 'pst_btc','eos_eth','eth_usdt','gnx_eth','hpb_btc','hpb_eth','hpb_usdt','ltc_eth','okb_btc','okb_eth','okb_usdt','hsr_eth','xrp_eth','xrp_btc','bch_eth','bch_usdt']
 
+okex_all_symbol = ['btc','eth','eos','gnx','hpb','ltc','okb','hsr','xrp','bch']
 
 ########################################################################
-class OkexGateway(VtGateway):
+class okexGateway(VtGateway):
     """OKEX交易接口"""
     
     #----------------------------------------------------------------------
     def __init__(self, eventEngine, gatewayName='OKEX'):
         """Constructor"""
-        super(OkexGateway, self).__init__(eventEngine, gatewayName)
+        super(okexGateway, self).__init__(eventEngine, gatewayName)
         
         self.api_spot = SpotApi(self)     
         # self.api_contract = Api_contract(self)
@@ -59,8 +60,15 @@ class OkexGateway(VtGateway):
         self.connected = False
         
         self.fileName = self.gatewayName + '_connect.json'
-        self.filePath = getJsonPath(self.fileName, __file__)     
+        self.filePath = getJsonPath(self.fileName, __file__)
 
+    # ----------------------11------------------------------------------------
+    def set_event(self, event):
+        try:
+            self.connected_sig = event
+        except Exception, e:
+            # raise
+            print e
     #----------------------------------------------------------------------
     def connect(self):
         """连接"""
@@ -227,7 +235,7 @@ class SpotApi(OkexSpotApi):
     #----------------------------------------------------------------------
     def onMessage(self, ws, evt):
         """信息推送""" 
-        # print evt
+        #print evt
 
         data = self.readData(evt)[0]
         try:
@@ -305,15 +313,15 @@ class SpotApi(OkexSpotApi):
     def subscribeSingleSymbol(self, symbol):
         if symbol in okex_all_symbol_pairs:
             self.subscribeSpotTicker(symbol)
-            self.subscribeSpotDepth5(symbol)
+            #self.subscribeSpotDepth5(symbol)
             #self.subscribeSpotDeals(symbol)
 
     #----------------------------------------------------------------------
     def spotAllOrders(self):
-        print spotAllOrders
-        for symbol in registerSymbolPairArray:
-            if symbol in okex_all_symbol_pairs:
-                self.spotOrderInfo(symbol, '-1')
+        print 'spotAllOrders'
+        #for symbol in self.registerSymbolPairArray:
+        for symbol in okex_all_symbol_pairs:
+            self.spotOrderInfo(symbol, '-1')
 
         for orderId in self.orderIdDict.keys():
             order = self.orderDict.get(orderId, None)
@@ -330,30 +338,41 @@ class SpotApi(OkexSpotApi):
         self.login()
         # 连接后查询账户和委托数据
         self.spotUserInfo()
-        
-        self.subscribeSingleSymbol("etc_usdt")
+        #Yifei
+        self.spotAllOrders()
+        #Yifei
+        symbol = "btc_usdt"
+        self.subscribeSingleSymbol(symbol)
+
         for symbol in okex_all_symbol_pairs:
-            # self.subscribeSpotTicker(symbol)
-            # self.subscribeSpotDepth5(symbol)
-            # self.subscribeSpotDeals(symbol)
+            if symbol==symbol:
+                #Yifei
+                self.subscribeSpotTicker(symbol)
+                try:
+                    self.subscribeSpotDepth(symbol,5)
+                except Exception as e:
+                    print e
+                #self.subscribeSpotDeals(symbol)
 
-            #Ticker数据
-            self.channelSymbolMap["ok_sub_spot_%s_ticker" % symbol] = symbol
-            #盘口的深度
-            self.channelSymbolMap["ok_sub_spot_%s_depth_5" % symbol] = symbol
-            #所有人的交易数据
-            self.channelSymbolMap["ok_sub_spot_%s_deals" % symbol] = symbol
+                #Ticker数据
+                self.channelSymbolMap["ok_sub_spot_%s_ticker" % symbol] = symbol
+                #盘口的深度
+                self.channelSymbolMap["ok_sub_spot_%s_depth_5" % symbol] = symbol
+                #所有人的交易数据
+                self.channelSymbolMap["ok_sub_spot_%s_deals" % symbol] = symbol
 
-            contract = VtContractData()
-            contract.gatewayName = self.gatewayName
-            contract.symbol = symbol
-            contract.exchange = EXCHANGE_OKEX
-            contract.vtSymbol = '.'.join([contract.symbol, contract.exchange])
-            contract.name = u'OKEX现货%s' % symbol
-            contract.size = 0.00001
-            contract.priceTick = 0.00001
-            contract.productClass = PRODUCT_SPOT
-            self.gateway.onContract(contract)
+                contract = VtContractData()
+                contract.gatewayName = self.gatewayName
+                contract.symbol = symbol
+                contract.exchange = EXCHANGE_OKEX
+                contract.vtSymbol = '.'.join([contract.symbol, contract.exchange])
+                contract.name = u'OKEX现货%s' % symbol
+                contract.size = 0.00001
+                contract.priceTick = 0.00001
+                contract.productClass = PRODUCT_SPOT
+                self.gateway.onContract(contract)
+        #Yifei
+        self.gateway.connected_sig.set()
 
     '''
     [{
@@ -368,7 +387,8 @@ class SpotApi(OkexSpotApi):
         rawData = data["data"]
 
         # print rawData
-
+        #Yifei
+        #self.spotUserInfo()
 
     #----------------------------------------------------------------------
     def writeLog(self, content):
@@ -430,7 +450,8 @@ class SpotApi(OkexSpotApi):
         if channel == 'addChannel':
             return
         try:
-            symbol = self.channelSymbolMap[channel]
+            self.channel_ = self.channelSymbolMap[channel]
+            symbol = self.channel_
             
             if symbol not in self.tickDict:
                 tick = VtTickData()
@@ -448,11 +469,11 @@ class SpotApi(OkexSpotApi):
             tick.lowPrice = float(rawData['low'])
             tick.lastPrice = float(rawData['last'])
             tick.volume = float(rawData['vol'].replace(',', ''))
-            # tick.date, tick.time = self.generateDateTime(rawData['timestamp'])
+            tick.date, tick.time = self.generateDateTime(rawData['timestamp'])
             
-            # print "ticker", tick.date, tick.time
-            # newtick = copy(tick)
-            # self.gateway.onTick(newtick)
+           # print tick.symbol, tick.date, tick.time, tick.highPrice, tick.lowPrice, tick.volume
+            newtick = copy(tick)
+            self.gateway.onTick(newtick)
         except Exception,ex:
             print "Error in onTicker ", channel
     
@@ -541,6 +562,8 @@ class SpotApi(OkexSpotApi):
             pos.position = pos.frozen + float(info['free'][symbol])
 
         self.gateway.onPosition(pos)
+        #Yifei
+        self.spotUserInfo()
 
     '''
     [{"binary":0,"channel":"ok_spot_userinfo","data":{"result":true,"info":{"funds":{"borrow":{"dgd":"0"
@@ -572,26 +595,31 @@ etc': u'0', u'act': u'0', u'eth': u'0', u'ltc': u'0', u'bcs': u'0'}, u'free': {u
     def onSpotUserInfo(self, data):
         """现货账户资金推送"""
         rawData = data['data']
-        info = rawData['info']
+        #info = rawData['info']
         funds = rawData['info']['funds']
-        
-        # 持仓信息
-        for symbol in ['btc', 'ltc','eth', self.currency]:
-        #for symbol in :
-            if symbol in funds['free']:
-                pos = VtPositionData()
-                pos.gatewayName = self.gatewayName
-                
-                pos.symbol = symbol + "." + EXCHANGE_OKEX
-                pos.vtSymbol = symbol + "." + EXCHANGE_OKEX
-                pos.vtPositionName = symbol
-                pos.direction = DIRECTION_NET
-                
-                pos.frozen = float(funds['freezed'][symbol])
-                pos.position = pos.frozen + float(funds['free'][symbol])
-                
-                self.gateway.onPosition(pos)
 
+        try:
+
+
+        # 持仓信息
+        #for symbol in ['btc', 'ltc','eth', self.currency]:
+            for symbol in okex_all_symbol:
+                #for symbol in :
+                if symbol in funds['free']:
+                    pos = VtPositionData()
+                    pos.gatewayName = self.gatewayName
+
+                    pos.symbol = symbol + "." + EXCHANGE_OKEX
+                    pos.vtSymbol = symbol + "." + EXCHANGE_OKEX
+                    pos.vtPositionName = symbol
+                    pos.direction = DIRECTION_NET
+
+                    pos.frozen = float(funds['freezed'][symbol])
+                    pos.position = pos.frozen + float(funds['free'][symbol])
+
+                    self.gateway.onPosition(pos)
+        except Exception as e:
+            print e
         # 账户资金
         account = VtAccountData()
         account.gatewayName = self.gatewayName
@@ -788,42 +816,45 @@ nel': u'ok_sub_spot_etc_usdt_order'}
     #----------------------------------------------------------------------
     def onSpotOrderInfo(self, data):
         """委托信息查询回调"""
-        if "error_code" in data.keys():
-            print data
-            return 
-        rawData = data['data']
-        for d in rawData['orders']:
-            self.localNo += 1
-            localNo = str(self.localNo)
-            orderId = str(d['order_id'])
-            
-            self.localNoDict[localNo] = orderId
-            self.orderIdDict[orderId] = localNo
-            
-            if orderId not in self.orderDict:
-                order = VtOrderData()
-                order.gatewayName = self.gatewayName
-                
-                #order.symbol = spotSymbolMap[d['symbol']]
-                order.symbol = '.'.join([d["symbol"], EXCHANGE_OKEX])
-                order.vtSymbol = order.symbol
-    
-                order.orderID = localNo
-                order.vtOrderID = '.'.join([self.gatewayName, order.orderID])
-                
-                order.price = d['price']
-                order.totalVolume = d['amount']
-                order.direction, priceType = priceTypeMap[d['type']]
-                
-                self.orderDict[orderId] = order
-            else:
-                order = self.orderDict[orderId]
-                
-            order.tradedVolume = d['deal_amount']
-            order.status = statusMap[d['status']]            
-            
-            self.gateway.onOrder(copy(order))
+        try:
+            if "error_code" in data.keys():
+                print data
+                return
+            rawData = data['data']
+            for d in rawData['orders']:
+                self.localNo += 1
+                localNo = str(self.localNo)
+                orderId = str(d['order_id'])
 
+                self.localNoDict[localNo] = orderId
+                self.orderIdDict[orderId] = localNo
+
+                if orderId not in self.orderDict:
+                    order = VtOrderData()
+                    order.gatewayName = self.gatewayName
+
+                    #order.symbol = spotSymbolMap[d['symbol']]
+                    order.symbol = '.'.join([d["symbol"], EXCHANGE_OKEX])
+                    order.vtSymbol = order.symbol
+
+                    order.orderID = localNo
+                    order.vtOrderID = '.'.join([self.gatewayName, order.orderID])
+
+                    order.price = d['price']
+                    order.totalVolume = d['amount']
+                    order.direction, priceType = priceTypeMap[d['type']]
+
+                    self.orderDict[orderId] = order
+                else:
+                    order = self.orderDict[orderId]
+
+                order.tradedVolume = d['deal_amount']
+                order.status = statusMap[d['status']]
+
+                self.gateway.onOrder(copy(order))
+        except Exception, e:
+            # raise
+            print e
     '''
     [
         {
@@ -837,6 +868,8 @@ nel': u'ok_sub_spot_etc_usdt_order'}
     ]
     '''
     def onSpotOrder(self, data):
+        #Yifei
+        print data
         rawData = data['data']
         if 'error_code' in rawData.keys():
             print data
@@ -888,10 +921,20 @@ nel': u'ok_sub_spot_etc_usdt_order'}
     #----------------------------------------------------------------------
     def onSpotCancelOrder(self, data):
         """撤单回报"""
+        #Yifei
+        print data
         if 'data' not in data:
             return
 
-        if 'error' in data["data"].keys():
+        if 'error_code' in data["data"].keys():
+            print '{0} - {1}; \n{2} - {3}; \n{4} - {5}'.format(
+                'hpb_eth',
+                self.tickDict['hpb_eth'].__dict__,
+                'eth_btc',
+                self.tickDict['eth_btc'].__dict__,
+                'hpb_btc',
+                self.tickDict['hpb_btc'].__dict__
+            )
             self.onError(data)
             return
 
@@ -928,17 +971,21 @@ nel': u'ok_sub_spot_etc_usdt_order'}
     #----------------------------------------------------------------------
     def spotSendOrder(self, req):
         """发单"""
-        #symbol = spotSymbolMapReverse[req.symbol][:4]
-        symbol = (req.symbol.split('.'))[0]
-        type_ = priceTypeMapReverse[(req.direction, req.priceType)]
+        try:
+            #symbol = spotSymbolMapReverse[req.symbol][:4]
+            symbol = (req.symbol.split('.'))[0]
+            type_ = priceTypeMapReverse[(req.direction, req.priceType)]
+            self.spotTrade(symbol, type_, str(req.price), str(req.volume))
 
-        self.spotTrade(symbol, type_, str(req.price), str(req.volume))
-        
-        # 本地委托号加1，并将对应字符串保存到队列中，返回基于本地委托号的vtOrderID
-        self.localNo += 1
-        self.localNoQueue.put(str(self.localNo))
-        vtOrderID = '.'.join([self.gatewayName, str(self.localNo)])
-        return vtOrderID
+            # 本地委托号加1，并将对应字符串保存到队列中，返回基于本地委托号的vtOrderID
+            self.localNo += 1
+            self.localNoQueue.put(str(self.localNo))
+            vtOrderID = '.'.join([self.gatewayName, str(self.localNo)])
+            return vtOrderID
+        except Exception, e:
+            # raise
+            print e
+
     
     #----------------------------------------------------------------------
     def spotCancel(self, req):
