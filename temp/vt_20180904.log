@@ -1,0 +1,19 @@
+2018-09-04 20:53:26,359  INFO: OKEX	接口初始化成功
+2018-09-04 20:53:26,366  ERROR: error from callback <bound method SpotApi.onOpen of <vnpy.trader.gateway.okexGateway.okexGateway.SpotApi object at 0x7f2e8dbbf8d0>>: onOpen() takes exactly 2 arguments (1 given)
+2018-09-04 21:00:00,318  INFO: OKEX	接口初始化成功
+2018-09-04 21:00:00,336  ERROR: error from callback <bound method SpotApi.onOpen of <vnpy.trader.gateway.okexGateway.okexGateway.SpotApi object at 0x7f9e76334990>>: onOpen() takes exactly 2 arguments (1 given)
+2018-09-04 21:29:23,916  INFO: OKEX	接口初始化成功
+2018-09-04 21:29:23,944  ERROR: error from callback <bound method SpotApi.onOpen of <vnpy.trader.gateway.okexGateway.okexGateway.SpotApi object at 0x7f88d0cea990>>: onOpen() takes exactly 2 arguments (1 given)
+2018-09-04 21:32:32,147  INFO: OKEX	接口初始化成功
+2018-09-04 21:32:32,173  ERROR: error from callback <bound method SpotApi.onOpen of <vnpy.trader.gateway.okexGateway.okexGateway.SpotApi object at 0x7f8b20b4d990>>: onOpen() takes exactly 2 arguments (1 given)
+2018-09-04 21:33:44,802  INFO: OKEX	接口初始化成功
+2018-09-04 21:33:44,825  ERROR: error from callback <bound method SpotApi.onOpen of <vnpy.trader.gateway.okexGateway.okexGateway.SpotApi object at 0x7f788c571210>>: onOpen() takes exactly 2 arguments (1 given)
+2018-09-04 21:36:27,373  INFO: OKEX	接口初始化成功
+2018-09-04 22:09:53,925  INFO: OKEX	接口初始化成功
+2018-09-04 22:10:00,792  INFO: OKEX	服务器连接成功
+2018-09-04 22:13:23,175  INFO: OKEX	接口初始化成功
+2018-09-04 22:13:23,197  INFO: OKEX	服务器连接成功
+2018-09-04 22:14:54,058  INFO: OKEX	接口初始化成功
+2018-09-04 22:14:54,093  INFO: OKEX	服务器连接成功
+2018-09-04 22:27:19,927  INFO: OKEX	接口初始化成功
+2018-09-04 22:27:19,949  INFO: OKEX	服务器连接成功

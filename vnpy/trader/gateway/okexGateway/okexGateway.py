@@ -9,6 +9,7 @@ vnpy.api.okex的gateway接入
 
 import os
 import json
+import pdb
 from datetime import datetime
 from time import sleep
 from copy import copy
@@ -334,7 +335,7 @@ class SpotApi(OkexSpotApi):
         """连接成功"""
         self.gateway.connected = True
         self.writeLog(u'服务器连接成功')
-        
+        pdb.set_trace()
         self.login()
         # 连接后查询账户和委托数据
         self.spotUserInfo()
@@ -372,7 +373,8 @@ class SpotApi(OkexSpotApi):
                 contract.productClass = PRODUCT_SPOT
                 self.gateway.onContract(contract)
         #Yifei
-        self.gateway.connected_sig.set()
+        pdb.set_trace()
+	self.gateway.connected_sig.set()
 
     '''
     [{

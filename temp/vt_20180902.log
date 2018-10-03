@@ -1,0 +1,2 @@
+2018-09-02 23:01:59,511  INFO: OKEX	接口初始化成功
+2018-09-02 23:01:59,521  ERROR: error from callback <bound method SpotApi.onOpen of <vnpy.trader.gateway.okexGateway.okexGateway.SpotApi object at 0x7fcadc59df50>>: onOpen() takes exactly 2 arguments (1 given)

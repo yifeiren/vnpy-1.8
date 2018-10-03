@@ -5,7 +5,7 @@ import sys
 import thread
 
 
-sys.path.append("/home/yf/Downloads/vnpy-1.8/examples/VnTrader/Arbitrage")
+sys.path.append("/root/vnpy-1.8/examples/VnTrader/Arbitrage")
 reload(sys)
 sys.setdefaultencoding('utf8')
 
@@ -28,7 +28,7 @@ from vnpy.trader.gateway import okexGateway
 
 
 # 加载上层应用
-from vnpy.trader.app import (riskManager, ctaStrategy, spreadTrading)
+#from vnpy.trader.app import (riskManager, ctaStrategy, spreadTrading)
 
 connected_sig = threading.Event()
 
@@ -37,7 +37,7 @@ connected_sig = threading.Event()
 def main():
     """主程序入口"""
     # 创建Qt应用对象
-    qApp = createQApp()
+#    qApp = createQApp()
 
     # 创建事件引擎
     ee = EventEngine()
@@ -49,9 +49,9 @@ def main():
     me.addGateway(okexGateway)
 
     # 添加上层应用
-    me.addApp(riskManager)
-    me.addApp(ctaStrategy)
-    me.addApp(spreadTrading)
+ #   me.addApp(riskManager)
+ #   me.addApp(ctaStrategy)
+ #   me.addApp(spreadTrading)
 
     # 创建主窗口
     #mw = MainWindow(me, ee)
@@ -85,8 +85,8 @@ def main():
 
         me.getGateway('OKEX').set_event(connected_sig)
 
-        t=threading.Thread(target=engine.run)
-        t.start()
+        #t=threading.Thread(target=engine.run)
+        #t.start()
 
         exchange = {
             'tickerPairA': 'gnx_eth',
@@ -101,8 +101,8 @@ def main():
 
         me.getGateway('OKEX').set_event(connected_sig)
 
-        t = threading.Thread(target=engine.run)
-        t.start()
+        #t = threading.Thread(target=engine.run)
+        #t.start()
 
         exchange = {
             'tickerPairA': 'eos_eth',
@@ -117,8 +117,8 @@ def main():
 
         me.getGateway('OKEX').set_event(connected_sig)
 
-        t = threading.Thread(target=engine.run)
-        t.start()
+        #t = threading.Thread(target=engine.run)
+        #t.start()
 
         exchange = {
             'tickerPairA': 'hpb_eth',
@@ -142,7 +142,7 @@ def main():
     except Exception, e:
         # raise
         print e
-    sys.exit(qApp.exec_())
+ #   sys.exit(qApp.exec_())
 
 
 if __name__ == '__main__':
