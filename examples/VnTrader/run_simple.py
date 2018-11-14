@@ -5,9 +5,9 @@ import sys
 import thread
 
 
-sys.path.append("/home/yf/Downloads/vnpy-1.8/examples/VnTrader/Arbitrage")
-#sys.path.append("/home/yf/Downloads/vnpy-1.8/examples/VnTrader/market maker")
-sys.path.append("/home/yf/Downloads/vnpy-1.8/examples/VnTrader/calendar spread")
+sys.path.append("~/Downloads/vnpy-1.8/examples/VnTrader/Arbitrage")
+#sys.path.append("~/Downloads/vnpy-1.8/examples/VnTrader/market maker")
+sys.path.append("~/Downloads/vnpy-1.8/examples/VnTrader/calendar spread")
 
 reload(sys)
 sys.setdefaultencoding('utf8')
@@ -33,7 +33,7 @@ from vnpy.trader.gateway import okexGateway
 
 
 # 加载上层应用
-from vnpy.trader.app import (riskManager, ctaStrategy, spreadTrading)
+#from vnpy.trader.app import (riskManager, ctaStrategy, spreadTrading)
 
 connected_sig = threading.Event()
 
@@ -54,14 +54,25 @@ def main():
     me.addGateway(okexGateway)
 
     # 添加上层应用
-    me.addApp(riskManager)
-    me.addApp(ctaStrategy)
-    me.addApp(spreadTrading)
+ #   me.addApp(riskManager)
+ #   me.addApp(ctaStrategy)
+ #   me.addApp(spreadTrading)
 
     # 创建主窗口
     #mw = MainWindow(me, ee)
     #mw.showMaximized()
 #Yifei
+    #exchange = {
+    #    'exchange': 'bittrex',
+    #    'keyFile': '../keys/bittrex.key',
+    #    'tickerPairA': 'BTC-ETH',
+    #    'tickerPairB': 'ETH-LTC',
+    #    'tickerPairC': 'BTC-LTC',
+    #    'tickerA': 'BTC',
+    #    'tickerB': 'ETH',
+    #    'tickerC': 'LTC'
+    #}
+
     try:
 
         if 0:
@@ -74,6 +85,7 @@ def main():
                 'tickerC': 'btc'
             }
 
+ 
 
             engine = CryptoEngineTriArbitrage(me, exchange, connected_sig,True)
 
@@ -140,7 +152,10 @@ def main():
         t.start()
   
     except Exception, e:
+
         print e
+    sys.exit(qApp.exec_())
+
 
 if __name__ == '__main__':
     main()
