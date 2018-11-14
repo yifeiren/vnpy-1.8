@@ -3,12 +3,9 @@
 
     "tick":
     [
-        ["rb1801", "CTP"],
-        ["m1801", "CTP"],
-        ["SR801", "CTP"],
-        ["IF1712", "CTP"],
-        ["IH1712", "CTP"],
-        ["IC1712", "CTP"]
+        ["eos.OKEX", "OKEX"],
+        ["btc.OKEX", "OKEX"],
+        ["eth.OKEX", "OKEX"]
     ],
 
     "bar":

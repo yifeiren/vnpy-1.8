@@ -19,27 +19,37 @@ API_SECRET = ""
 ########################################################################################################################
 
 # Instrument to market make on BitMEX.
-SYMBOL = "XBTUSD"
+#SYMBOL = "hpb_eth"
+SYMBOL = "ada_eth"
 
+#SYMBOL = "eth_btc"
 
 ########################################################################################################################
 # Order Size & Spread
 ########################################################################################################################
 
 # How many pairs of buy/sell orders to keep open
-ORDER_PAIRS = 6
+ORDER_PAIRS = 1
 
 # ORDER_START_SIZE will be the number of contracts submitted on level 1
 # Number of contracts from level 1 to ORDER_PAIRS - 1 will follow the function
 # [ORDER_START_SIZE + ORDER_STEP_SIZE (Level -1)]
-ORDER_START_SIZE = 100
-ORDER_STEP_SIZE = 100
+#ORDER_START_SIZE = 0.4
+#ORDER_STEP_SIZE = 0.01
+#ORDER_START_SIZE = 100
+#ORDER_STEP_SIZE = 30
+ORDER_START_SIZE = 2000
+ORDER_STEP_SIZE = 300
+
+#ORDER_START_SIZE = 0.1
+#ORDER_STEP_SIZE = 0.02
+
 
 # Distance between successive orders, as a percentage (example: 0.005 for 0.5%)
 INTERVAL = 0.005
 
 # Minimum spread to maintain, in percent, between asks & bids
-MIN_SPREAD = 0.01
+MIN_SPREAD = 0.0022
 
 # If True, market-maker will place orders just inside the existing spread and work the interval % outwards,
 # rather than starting in the middle and killing potentially profitable spreads.
@@ -79,7 +89,7 @@ POST_ONLY = False
 ########################################################################################################################
 
 # If true, don't set up any orders, just say what we would do
-# DRY_RUN = True
+#DRY_RUN = True
 DRY_RUN = False
 
 # How often to re-check and replace orders.
@@ -88,7 +98,7 @@ DRY_RUN = False
 LOOP_INTERVAL = 5
 
 # Wait times between orders / errors
-API_REST_INTERVAL = 1
+API_REST_INTERVAL = 8
 API_ERROR_INTERVAL = 10
 TIMEOUT = 7
 
@@ -116,4 +126,9 @@ WATCHED_FILES = [join('market_maker', 'market_maker.py'), join('market_maker', '
 ########################################################################################################################
 
 # Specify the contracts that you hold. These will be used in portfolio calculations.
-CONTRACTS = ['XBTUSD']
+#CONTRACTS = ['eth_btc']
+#TICKSIZE = 0.000001
+#CONTRACTS = ['hpb_eth']
+#TICKSIZE = 0.00000001
+CONTRACTS = ['ada_eth']
+TICKSIZE = 0.00000001

@@ -4,8 +4,8 @@ import importlib
 import os
 import sys
 
-from market_maker.utils.dotdict import dotdict
-import market_maker._settings_base as baseSettings
+from utils import dotdict as dotdict
+import _settings_base as baseSettings
 
 
 def import_path(fullpath):
@@ -17,7 +17,7 @@ def import_path(fullpath):
     filename, ext = os.path.splitext(filename)
     sys.path.insert(0, path)
     module = importlib.import_module(filename, path)
-    importlib.reload(module)  # Might be out of date
+    #importlib.reload(module)  # Might be out of date
     del sys.path[0]
     return module
 
@@ -40,4 +40,4 @@ if symbolSettings:
     settings.update(vars(symbolSettings))
 
 # Main export
-settings = dotdict(settings)
+settings = dotdict.dotdict(settings)

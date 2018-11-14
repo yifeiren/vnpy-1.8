@@ -75,7 +75,25 @@ class VtTickData(VtBaseData):
         self.askVolume4 = EMPTY_INT
         self.askVolume5 = EMPTY_INT         
 
-    
+        #Okex
+        self.limitHigh = EMPTY_STRING#(string):最高买入限制价格
+        self.limitLow = EMPTY_STRING#(string):最低卖出限制价格
+        self.vol= EMPTY_FLOAT#(double):24小时成交量
+        self.sell=EMPTY_FLOAT#(double):卖一价格
+        self.buy= EMPTY_FLOAT#(double): 买一价格
+        self.unitAmount=EMPTY_FLOAT #(double):合约价值
+        self.hold_amount=EMPTY_FLOAT#(double):当前持仓量
+        self.contractId= EMPTY_INT#(long):合约ID
+        self.high=EMPTY_FLOAT#:24小时最高价格
+        self.low= EMPTY_FLOAT#:24 小时最低价格
+        self.type = EMPTY_INT #1, THIS WEEK, 2 NEXT_WEEK, 3,QUARTER
+        self.nextweekvsthisweek = EMPTY_FLOAT
+        self.quartervsthisweek= EMPTY_FLOAT
+        self.quartervsnextweek = EMPTY_FLOAT
+        self.forecast = EMPTY_FLOAT
+        self.futureindex = EMPTY_FLOAT
+        self.thisweekvsspot = EMPTY_FLOAT
+
 ########################################################################
 class VtBarData(VtBaseData):
     """K线数据"""
@@ -100,7 +118,10 @@ class VtBarData(VtBaseData):
         
         self.volume = EMPTY_INT             # 成交量
         self.openInterest = EMPTY_INT       # 持仓量    
-    
+        #Okex
+        self.amount =EMPTY_FLOAT
+        self.amount_cur  =EMPTY_FLOAT
+        self.type = EMPTY_INT
 
 ########################################################################
 class VtTradeData(VtBaseData):
@@ -162,7 +183,26 @@ class VtOrderData(VtBaseData):
         self.frontID = EMPTY_INT                # 前置机编号
         self.sessionID = EMPTY_INT              # 连接编号
 
-    
+
+        #okex
+        self.amount = EMPTY_FLOAT #    amount(double): 委托数量
+        self.contract_name = EMPTY_STRING#    contract_name(string): 合约名称
+        self.create_date = EMPTY_FLOAT#     created_date(long): 委托时间
+        self.create_date_str = EMPTY_STRING#    create_date_str(string):委托时间字符串
+        self.deal_amount = EMPTY_FLOAT #    deal_amount(double): 成交数量
+        self.fee = EMPTY_FLOAT#    fee(double): 手续费
+        #order_id(long): 订单ID
+        #price(double): 订单价格
+        self.price_avg =  EMPTY_FLOAT# price_avg(double): 平均价格
+        self.type = EMPTY_INT    # 订单类 1：开多2：开空 3：平多 4：平空
+        #
+        #status(int): 订单状态(0 等待成交 1 部分成交 2 全部成交 - 1 撤单 4 撤单处理中)
+        #symbol(string): btc_usd   ltc_usd   eth_usd   etc_usd   bch_usd
+        self.unit_amount = EMPTY_FLOAT #(double):合约面值
+        self.lever_rate = EMPTY_FLOAT #(double):杠杆倍数
+        #self.value = EMPTY_INT#:10 / 20 默认10
+        self.system_type = EMPTY_INT#(int):订单类型0:普通1:交割2:强平4:全平5:系统反单
+
 ########################################################################
 class VtPositionData(VtBaseData):
     """持仓数据类"""
@@ -186,6 +226,29 @@ class VtPositionData(VtBaseData):
         self.ydPosition = EMPTY_INT             # 昨持仓
         self.positionProfit = EMPTY_FLOAT       # 持仓盈亏
 
+        #Okex
+        #position(string): 仓位 1 多仓 2 空仓
+        self.contract_name = EMPTY_STRING # (string): 合约名称
+        self.costprice = EMPTY_STRING # (string): 开仓价格
+        self.bondfreez = EMPTY_STRING # (string): 当前合约冻结保证金
+        self.avgprice = EMPTY_STRING # (string): 开仓均价
+        self.contract_id = EMPTY_FLOAT # (long): 合约id
+        self.position_id = EMPTY_FLOAT #(long): 仓位id
+        self.hold_amount = EMPTY_STRING # (string): 持仓量
+        self.eveningup = EMPTY_STRING # (string): 可平仓量
+        self.levetype = EMPTY_INT  # 0 全仓 1 逐仓
+        #Okex 全仓
+        self.margin = EMPTY_FLOAT #: 固定保证金
+        self.realized = EMPTY_FLOAT #:已实现盈亏
+
+        #Okex 逐仓
+        self.balance = EMPTY_STRING #(string): 合约账户余额
+
+        self.forcedprice = EMPTY_STRING #(string): 强平价格
+        self.profitreal = EMPTY_STRING #(string): 已实现盈亏
+        self.fixmargin = EMPTY_FLOAT #(double): 固定保证金
+        self.lever_rate = EMPTY_FLOAT #(double): 杠杆倍数
+
 
 ########################################################################
 class VtAccountData(VtBaseData):
@@ -208,7 +271,23 @@ class VtAccountData(VtBaseData):
         self.margin = EMPTY_FLOAT               # 保证金占用
         self.closeProfit = EMPTY_FLOAT          # 平仓盈亏
         self.positionProfit = EMPTY_FLOAT       # 持仓盈亏
-        
+
+        #
+        #balance(double): 账户余额
+        self.symbol = EMPTY_STRING #(string)：币种
+        self.keep_deposit = EMPTY_FLOAT #(double)：保证金
+        self.profit_real= EMPTY_FLOAT #(double)：已实现盈亏
+        self.unit_amount = EMPTY_INT #(int)：合约价值
+        #balance.available
+        self.bond = EMPTY_FLOAT
+        self.contract_id = EMPTY_INT
+        self.freeze = EMPTY_FLOAT
+        self.long_order_amount = EMPTY_FLOAT
+        self.pre_long_order_amount = EMPTY_FLOAT
+        self.profit = EMPTY_FLOAT
+        self.short_order_amount = EMPTY_FLOAT
+        self.pre_short_order_amount = EMPTY_FLOAT
+
 
 ########################################################################
 class VtErrorData(VtBaseData):
@@ -308,7 +387,12 @@ class VtOrderReq(object):
         self.optionType = EMPTY_UNICODE         # 期权类型     
         self.lastTradeDateOrContractMonth = EMPTY_STRING   # 合约月,IB专用
         self.multiplier = EMPTY_STRING                     # 乘数,IB专用
-        
+
+        # Okex FUTURE
+        self.contracttype = EMPTY_STRING
+        self.type = EMPTY_INT
+        self.matchprice = EMPTY_STRING
+        self.leverrate = EMPTY_STRING
 
 ########################################################################
 class VtCancelOrderReq(object):
@@ -326,6 +410,8 @@ class VtCancelOrderReq(object):
         self.frontID = EMPTY_STRING             # 前置机号
         self.sessionID = EMPTY_STRING           # 会话号
 
+        # Okex Future
+        self.contracttype = EMPTY_STRING
 
 ########################################################################
 class VtSingleton(type):

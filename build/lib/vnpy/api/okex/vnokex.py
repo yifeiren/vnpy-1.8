@@ -401,20 +401,4 @@ class OkexFuturesApi(OkexApi):
         
         self.sendTradingRequest(channel, params)
 
-    #----------------------------------------------------------------------
-    def subscribeFuturesTrades( self):
-        channel = 'ok_sub_futureusd_trades'
-        self.sendTradingRequest(channel, {})
 
-    #----------------------------------------------------------------------
-    def subscribeFuturesUserInfo(self):
-        """订阅期货账户信息"""
-        channel = 'ok_sub_futureusd_userinfo' 
-        self.sendTradingRequest(channel, {})
-        
-    #----------------------------------------------------------------------
-    def subscribeFuturesPositions(self):
-        """订阅期货持仓信息"""
-        channel = 'ok_sub_futureusd_positions' 
-        self.sendTradingRequest(channel, {})    
-    
